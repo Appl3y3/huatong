@@ -36,13 +36,13 @@
                 <td>${d.insert_time}</td>
                 <td>${d.modifytime}</td>
 
-               <%--
-               <td><a href="toview?deptId=${d.deptId}">${d.deptName}</a></td>
-                <td>
-                    <c:if test="${d.state==1}"><a href="stop?deptId=${d.deptId}"><font color="green">启用</font></a></c:if>
-                    <c:if test="${d.state==0}"><a href="start?deptId=${d.deptId}"><font color="red">停用</font></a></c:if>
-                </td>
-                --%>
+                <%--
+                <td><a href="toview?deptId=${d.deptId}">${d.deptName}</a></td>
+                 <td>
+                     <c:if test="${d.state==1}"><a href="stop?deptId=${d.deptId}"><font color="green">启用</font></a></c:if>
+                     <c:if test="${d.state==0}"><a href="start?deptId=${d.deptId}"><font color="red">停用</font></a></c:if>
+                 </td>
+                 --%>
             </tr>
         </forEach>
 
