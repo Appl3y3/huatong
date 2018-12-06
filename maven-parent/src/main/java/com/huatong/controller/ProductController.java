@@ -19,8 +19,7 @@ public class ProductController {
     public String find(Model model){
         List<Product> list = productService.findAll();
         model.addAttribute("productlist",list);
-        return "/productlist";
+        return "product/productlist";
     }
-
 
 }
