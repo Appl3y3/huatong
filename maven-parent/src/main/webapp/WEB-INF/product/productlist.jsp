@@ -29,7 +29,7 @@
 
         <c:forEach items="${productlist}" var="product" varStatus="status">
             <tr class="odd" onmouseover="this.className='highlight'" onmouseout="this.className='odd'">
-                <td><input type="checkbox" name="productId" value="${product.product_id}"/></td>
+                <td><input type="checkbox" name="productId" value="${product.product_id}"/>${product.product_id}</td>
                 <td>${product.product_no}</td>
                 <td>${product.product_name}</td>
                 <td>${product.status}</td>
