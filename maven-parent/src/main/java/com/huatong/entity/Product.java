@@ -1,5 +1,8 @@
 package com.huatong.entity;
 
+
+import com.huatong.utils.TransSqlDateTime;
+
 import java.sql.Timestamp;
 
 public class Product {
@@ -8,8 +11,24 @@ public class Product {
     private String product_name;     //产品名称
     private String status;          //产品状态
     private Integer num;            //产品数量
-    private Timestamp insert_time;  //产品入库时间
-    private Timestamp modify_time;   //产品数据修改时间
+    private String insert_time;  //产品入库时间
+    private String modify_time;   //产品数据修改时间
+
+    public String getInsert_time() {
+        return insert_time;
+    }
+
+    public void setInsert_time(Timestamp insert_time) {
+        this.insert_time = TransSqlDateTime.getSqlDatetime(insert_time);
+    }
+
+    public String getModify_time() {
+        return modify_time;
+    }
+
+    public void setModify_time(Timestamp modify_time) {
+        this.modify_time = TransSqlDateTime.getSqlDatetime(modify_time);
+    }
 
     public String getProduct_id() {
         return product_id;
@@ -51,19 +70,4 @@ public class Product {
         this.num = num;
     }
 
-    public Timestamp getInsert_time() {
-        return insert_time;
-    }
-
-    public void setInsert_time(Timestamp insert_time) {
-        this.insert_time = insert_time;
-    }
-
-    public Timestamp getModify_time() {
-        return modify_time;
-    }
-
-    public void setModify_time(Timestamp modify_time) {
-        this.modify_time = modify_time;
-    }
 }

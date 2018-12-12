@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>产品列表</title>
@@ -26,15 +27,15 @@
         </thead>
         <tbody class="tableBody" >
 
-        <forEach items="${productlist}" var="d" varStatus="status">
+        <c:forEach items="${productlist}" var="product" varStatus="status">
             <tr class="odd" onmouseover="this.className='highlight'" onmouseout="this.className='odd'">
-                <td><input type="checkbox" name="productId" value="${d.productId}"/></td>
-                <td>${d.productNo}</td>
-                <td>${d.productName}</td>
-                <td>${d.status}</td>
-                <td>${d.num}</td>
-                <td>${d.insert_time}</td>
-                <td>${d.modifytime}</td>
+                <td><input type="checkbox" name="productId" value="${product.product_id}"/></td>
+                <td>${product.product_no}</td>
+                <td>${product.product_name}</td>
+                <td>${product.status}</td>
+                <td>${product.num}</td>
+                <td>${product.insert_time}</td>
+                <td>${product.modify_time}</td>
 
                 <%--
                 <td><a href="toview?deptId=${d.deptId}">${d.deptName}</a></td>
@@ -44,7 +45,7 @@
                  </td>
                  --%>
             </tr>
-        </forEach>
+        </c:forEach>
 
         </tbody>
     </table>
