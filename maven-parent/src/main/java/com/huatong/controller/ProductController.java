@@ -24,4 +24,9 @@ public class ProductController {
 
     }
 
+    @RequestMapping("/add")
+    public String add() {
+
+        return "product/addproduct";
+    }
 }
